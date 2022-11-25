@@ -1,0 +1,113 @@
+.alert .close {
+    float: right;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+  }
+  
+ .alert .close:hover,.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .5;
+  }
+  
+  .alert button.close {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+  }
+  
+  
+  
+  .alert {
+    
+    position: relative;
+    padding: 10px 15px 10px 61px;
+    margin-bottom: 20px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 425px;
+}
+    
+
+  
+  .alert .icon {
+    text-align: center;
+    width: 45px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* border: 1px solid #bdbdbd; */
+  }
+  .alert.alert.alertinfo .close{
+    color: #0087ff;
+  }
+  .alert.alert.alertdanger .close{
+    color: #e02323;
+  }
+  .alert.alert.alertwarning .close{
+    color: #ff6126;
+  }
+  .alert.alert.alertsuccess .close{
+    color: #2d9571;
+  }
+  .alert.alertinfo{
+    border-color: #0087ff;
+  }
+  .alert.alertdanger{
+    border-color: #e02323;
+  }
+  .alert.alertwarning{
+    border-color: #ff6126;
+  }
+  .alert.alertsuccess{
+    border-color: #2d9571;
+  }
+  .alert.alertdanger .icon svg {
+    background: #e02323;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 15px;
+  }
+  
+  .alert.alertinfo .icon svg {
+    background: #0087ff;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 15px;
+  }
+  
+  .alert.alertwarning .icon svg {
+    background: #ff6126;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 15px;
+  }
+  
+  .alert.alertsuccess .icon svg {
+    background: #2d9571;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 15px;
+  }
+  .alert .icon{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  .alert .displaycontent{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }

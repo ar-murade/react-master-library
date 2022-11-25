@@ -1,0 +1,50 @@
+.defaultwrapper button {
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    padding: 14px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    background: transparent;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgb(255 255 255 / 50%), 7px 7px 20px 0px rgb(0 0 0 / 10%), 4px 4px 5px 0px rgb(0 0 0 / 10%);
+    cursor: pointer;
+    border: none;
+}
+.emphasizedwrapp button:hover:enabled , .buttonwrapper button{
+    background: #7e13db;
+    color: #fff;
+    border: none;
+}
+
+.buttonwrapper button:hover:enabled {
+    background: #9015f9;
+}
+
+.textbtnwrapper button{
+    color: #000 ;
+    background:#fff ;
+    box-shadow: none ;
+}
+.textbtnwrapper button:hover:enabled {
+    background: #f1f1f1 ;
+}
+
+.emphasizedwrapp button{
+    background: #fff ;
+    color: #7e13db ;
+    border: 2px solid #7e13db ;
+}
+
+.strokedwrapper button{
+    background: #fff ;
+    color: #000 ;
+    border: 2px solid #000 ;
+}
+.strokedwrapper button:hover:enabled{
+    background: #f1f1f1;
+    border: 2px solid #f1f1f1;
+}
+.defaultwrapper button:disabled{
+    cursor: not-allowed;
+}
