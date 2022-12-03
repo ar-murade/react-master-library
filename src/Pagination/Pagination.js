@@ -25,20 +25,18 @@ function chunks (a, size){
 
 
 function createPagination(totalPages, page){
+
   const records=[...props.records]
  
     setPage(page)
-    props.onPageChange(page)
-    // 1 = 1 , 2
-    // 2 = 3, 4
-    
-  
+
+    if(props.onPageChange){
+      props.onPageChange(page)
+    }
+    if(props.getPaginatedData){
+      props.getPaginatedData(chunks(records, props.itemPerPage)[page-1])
+    }
    
-
-  
-    props.getPaginatedData(chunks(records, props.itemPerPage)[page-1])
-
-
     let active;
     let beforePagep = page - 1;
     let afterPagep = page + 1;

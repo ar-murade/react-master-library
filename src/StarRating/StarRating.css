@@ -14,7 +14,7 @@
   font-size: 2rem;
 }
 .fullstars .ratingiconstar {
-  color: orange;
+  color: #a450ed;
 }
 .fullstars .rating__iconnone {
   color: #eee;
@@ -26,7 +26,7 @@
   color: #ddd;
 }
 .fullstars .ratinggroup:hover .rating__label .ratingiconstar {
-  color: orange;
+  color: #b76bf8;
 }
 .fullstars .rating__input:hover ~ .rating__label .ratingiconstar {
   color: #ddd;
@@ -60,7 +60,7 @@
   z-index: 2;
 }
 .halfstars .ratingiconstar {
-  color: orange;
+  color: #a450ed;
 }
 .halfstars .rating__iconnone {
   color: #eee;
@@ -73,7 +73,7 @@
 }
 .halfstars .ratinggroup:hover .rating__label .ratingiconstar,
 .halfstars .ratinggroup:hover .rating__labelhalf .ratingiconstar {
-  color: orange;
+  color: #b76bf8;
 }
 .halfstars .rating__input:hover ~ .rating__label .ratingiconstar,
 .halfstars .rating__input:hover ~ .rating__labelhalf .ratingiconstar {
@@ -84,35 +84,4 @@
 }
 .halfstars .rating__inputnone:hover + .rating__label .rating__iconnone {
   color: red;
-}
-
-.fullstarstwo .ratinggroup {
-  display: inline-flex;
-}
-.fullstarstwo .rating__icon {
-  pointer-events: none;
-}
-.fullstarstwo .rating__input {
-  position: absolute !important;
-  left: -9999px !important;
-}
-.fullstarstwo .rating__inputnone {
-  display: none;
-}
-.fullstarstwo .rating__label {
-  cursor: pointer;
-  padding: 0 0.1em;
-  font-size: 2rem;
-}
-.fullstarstwo .ratingiconstar {
-  color: orange;
-}
-.fullstarstwo .rating__input:checked ~ .rating__label .ratingiconstar {
-  color: #ddd;
-}
-.fullstarstwo .ratinggroup:hover .rating__label .ratingiconstar {
-  color: orange;
-}
-.fullstarstwo .rating__input:hover ~ .rating__label .ratingiconstar {
-  color: #ddd;
 }

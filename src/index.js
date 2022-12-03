@@ -5,3 +5,8 @@ export * from './Alert';
 export * from './Collapse'
 export * from './Carousel'
 export * from './StarRating'
+export * from './Tab'
+export * from './Tooltip'
+export * from './Table'
+export * from './Card'
+export * from './HeaderComponent'

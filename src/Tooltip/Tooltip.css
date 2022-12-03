@@ -1,0 +1,167 @@
+.tooltipwrapper{
+    cursor: pointer;
+}
+.tooltipwrapper [data-tooltip] {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltipwrapper  [data-tooltip]:before, [data-tooltip]:after {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 99;
+  }
+  
+  .tooltipwrapper [data-tooltip]:before {
+    content: '';
+    position: absolute;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent;
+  }
+  
+  .tooltipwrapper  [data-tooltip]:after {
+    height: 22px;
+    padding: 11px 11px 0 11px;
+    font-size: 13px;
+    line-height: 11px;
+    content: attr(data-tooltip);
+    white-space: nowrap;
+    border-radius: 5px;
+  }
+  
+  .tooltipwrapper  [data-tooltip].tooltipwrappertop:before {
+    border-top-color: #323232;
+  }
+  
+  .tooltipwrapper  [data-tooltip].tooltipwrappertop:after {
+    background-color: #323232;
+    color: #ecf0f1;
+  }
+  
+  .tooltipwrapper  [data-tooltip].tooltipwrapperbottom:before {
+    border-bottom-color: #323232;
+  }
+  
+  .tooltipwrapper  [data-tooltip].tooltipwrapperbottom:after {
+    background-color: #323232;
+    color: #ecf0f1;
+  }
+  
+  .tooltipwrapper  [data-tooltip].tooltipwrapperleft:before {
+    border-left-color: #323232;
+  }
+  
+  .tooltipwrapper  [data-tooltip].tooltipwrapperleft:after {
+    background-color: #323232;
+    color: #ecf0f1;
+  }
+  
+  .tooltipwrapper [data-tooltip].tooltipwrapperright:before {
+    border-right-color: #323232;
+  }
+  
+  .tooltipwrapper  [data-tooltip].tooltipwrapperright:after {
+    background-color: #323232;
+    color: #ecf0f1;
+  }
+
+  .tooltipwrapper  [data-tooltip]:hover, [data-tooltip]:focus {
+    background-color: transparent;
+  }
+  
+  .tooltipwrapper  [data-tooltip]:hover:before, [data-tooltip]:hover:after, [data-tooltip]:focus:before, [data-tooltip]:focus:after {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  
+.tooltipwrapperright:before, .tooltipwrapperright:after, .tooltipwrapperleft:before, .tooltipwrapperleft:after {
+    bottom: 50%;
+  }
+  
+  .tooltipwrapperright:before, .tooltipwrapperleft:before {
+    margin-bottom: -5px;
+  }
+  
+  .tooltipwrapperright:after, .tooltipwrapperleft:after {
+    margin-bottom: -14.66667px;
+  }
+  
+  .tooltipwrapperright:before, .tooltipwrapperright:after {
+    left: 100%;
+  }
+  
+  .tooltipwrapperright:before {
+    margin-left: -2px;
+  }
+  
+  .tooltipwrapperright:after {
+    margin-left: 10px;
+  }
+  
+  .tooltipwrapperleft:before, .tooltipwrapperleft:after {
+    right: 100%;
+  }
+  
+  .tooltipwrapperleft:before {
+    margin-right: -2px;
+  }
+  
+  .tooltipwrapperleft:after {
+    margin-right: 10px;
+  }
+  
+  .tooltipwrapperbottom:before, .tooltipwrapperbottom:after, .tooltipwrappertop:before, .tooltipwrappertop:after {
+    left: 50%;
+  }
+  
+  .tooltipwrapperbottom:after, .tooltipwrappertop:after {
+    margin-left: -18px;
+  }
+
+  
+  .tooltipwrapperbottom:before, .tooltipwrapperbottom:after {
+    top: 100%;
+  }
+  
+  .tooltipwrapperbottom:before {
+    margin-top: -5px;
+  }
+  
+  .tooltipwrapperbottom:after {
+    margin-top: 7px;
+  }
+  
+  .tooltipwrappertop:before, .tooltipwrappertop:after {
+    bottom: 100%;
+  }
+  
+  .tooltipwrappertop:before {
+    margin-bottom: -5px;
+  }
+  
+  .tooltipwrappertop:after {
+    margin-bottom: 7px;
+  }
+  .tooltipwrapper .expand:before {
+    transform: scale3d(.2,.2,1);
+    transition: all .2s ease-in-out;
+  }
+  .tooltipwrapper .expand:after {
+    transform: translate3d(0,6px,0);
+    transition: all .1s ease-in-out;
+  }
+  .tooltipwrapper .expand:hover:before,
+  .tooltipwrapper .expand:hover:after {
+    opacity: 1;
+    transform: scale3d(1,1,1);
+  }
+  .tooltipwrapper .expand:hover:after {
+    transition: all .2s .1s ease-in-out;
+  }  
+  
+ 
+  
+

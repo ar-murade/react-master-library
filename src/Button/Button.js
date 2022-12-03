@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './Button.css'
+import common from './../styles.module.css'
+
 
 export const Button = (props) => {
 
@@ -21,8 +23,8 @@ export const Button = (props) => {
   }
   
   return (
-    <div className={classes}>
- <button onClick={props.onClick ? ()=>props.onClick(): undefined} type={props.type} disabled={props.disabled} style={{width:props.width}} id={props.id}>{ props.children || 'Button' }</button>
+    <div className={classes+' '+styles.btnwrap}>
+ <button className={common.ripple} onClick={props.onClick ? ()=>props.onClick(): undefined} type={props.type} disabled={props.disabled} style={{width:props.width}} id={props.id}>{ props.children || 'Button' }</button>
  </div>
   )
 }

@@ -1,0 +1,170 @@
+.mainwrapper {
+	box-shadow: 0 5px 5px -3px #0003, 0 0px 3px 1px #00000024, 0 0px 14px -2px #0000001f;
+	padding: 0px 20px;
+	border-radius: 8px;
+}
+
+.tablewrapper {
+	width: 100%;
+	border-collapse: collapse;
+
+}
+
+.tablecontainer {
+
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	width: 100%;
+	max-height: 500px;
+	overflow: auto;
+	position: relative;
+
+}
+
+.disablearrow {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0.5;
+	}
+}
+
+.tablewrapper th:hover svg {
+	animation: fadein 0.5s;
+
+}
+
+/* Zebra striping */
+.tablewrapper tr:nth-of-type(odd) {
+	background: #f9f2ff;
+}
+
+.tablewrapper th {
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+	border-bottom: 1px solid #bbb1b1;
+	font-weight: 600;
+	background-color: #fff;
+	position: sticky;
+	top: 0;
+	padding-top: 20px;
+
+}
+
+.tablewrapper th svg {
+	font-size: 15px;
+	opacity: 0;
+
+}
+
+.tablewrapper td,
+th {
+	padding: 10px;
+	text-align: left;
+	font-size: 15px;
+}
+
+.searchcontainer {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+
+}
+
+.searchcontainer input {
+	margin: 15px 0;
+	padding: 10px;
+	width: 35%;
+	outline: none;
+	border: 2px solid #a3a3a3;
+	border-radius: 12px;
+	display: inline-block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-ms-transition: 0.2s ease all;
+	-o-transition: 0.2s ease all;
+	transition: 0.2s ease all;
+}
+
+.searchcontainer input:focus {
+	border-color: #c288f5;
+}
+
+.tablewrapper tbody tr:hover {
+	background: #f9f2ff;
+
+}
+
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+
+	.tablewrapper {
+		width: 100%;
+	}
+
+	/* Force table to not be like tables anymore */
+	.tablewrapper,
+	.tablewrapper thead,
+	.tablewrapper tbody,
+	.tablewrapper th,
+	.tablewrapper td,
+	.tablewrapper tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	.tablewrapper thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	.tablewrapper tr {
+		border: 1px solid #ccc;
+	}
+
+	.tablewrapper td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+
+	.tablewrapper td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+
+}
