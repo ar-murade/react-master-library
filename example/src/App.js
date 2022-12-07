@@ -1,6 +1,7 @@
+import { Launch,Home } from '@material-ui/icons'
 import React, { Fragment, useState } from 'react'
 
-import { Accordion, AccordionGroup, Alert, Button, Collapse,Carousel,Card,StarRating, Tab,TabContent, Tooltip, Table, TableRowData, TableHeadRow, TableSearch, TablePagination, HeaderComponent } from 'react-master-library'
+import { Accordion, AccordionGroup, Alert, Button, Collapse,Carousel,Card,StarRating, Sidebar,Tab,TabContent, Tooltip, Table, TableRowData, TableHeadRow, TableSearch, TablePagination, HeaderComponent, MenuBar } from 'react-master-library'
 import 'react-master-library/dist/index.css'
 import logo from './ReactJS.png'
 
@@ -74,11 +75,78 @@ const App = () => {
 
 ];
 
+const array=[
+  {
+    title: 'Home',
+    icon:<Home></Home>
+  },
+  {
+    title: 'Contact',
+  },
+  {
+    title: 'Product',
+
+    subMenu: [
+   {
+    header: 'Header 1',
+    icon:<Home></Home>,
+    child: [
+      {title:'Item 1',icon:<Home></Home>},
+      {title:'Item 2'}
+    ]
+   },
+   {
+    header: 'Header 2',
+    icon:<Home></Home>,
+    child: [
+      {title:'Item 3'},
+      {title:'Item 4'}
+    ]
+   },
+
+    ]
+  },
+  {
+    title: 'Profile',
+    subMenu: [
+   {
+    child: [
+      {title:'Log Out',icon:<Launch></Launch>}
+      
+    ]
+   }
+   
+
+    ]
+  },
+
+]
   
+const sidebarArray=[
+  {title: 'Dashboard', path:"/" , icon:<Home></Home> },
+  {title: 'Page 1', icon:<Home></Home> ,subMenu:[
+    {title:'Submenu 1',icon:<Home></Home>},
+    {title:'Submenu 2',icon:<Home></Home>},
+    {title:'Submenu 3',icon:<Home></Home>}
+  ]},
+  {title: 'Page 2',icon:<Home></Home>,subMenu:[
+    {title:'Submenu 1',icon:<Home></Home>},
+    {title:'Submenu 2',icon:<Home></Home>}]},
+  {title: 'Page 3',icon:<Home></Home>},
+]
+const getmenu=(e)=>{
+  console.log(e)
+}
   return (
     <Fragment>
+    
      
-     <HeaderComponent logo={logo} menuIcon={true}></HeaderComponent>
+     <HeaderComponent logo={logo} menuIcon={true}>
+      <MenuBar items={array} onClick={getmenu}></MenuBar>
+      <Sidebar items={sidebarArray}></Sidebar>
+     </HeaderComponent>
+
+<section>
       <Card width="500px">
         This is card
       </Card>
@@ -89,6 +157,9 @@ const App = () => {
         <TableRowData rowData={dataset}></TableRowData>
         <TablePagination itemPerPage={2} onPageChange={onPageChange} ></TablePagination>
       </Table>
+      <section>
+        
+      </section>
       {/* <Pagination records={data} itemPerPage={5} onPageChange={onPageChange} getPaginatedData={getPaginatedData} activePage={1}></Pagination> */}
 
       <Tooltip tooltipData="this is tooltip" tooltipPosition="right">Right</Tooltip>
@@ -153,6 +224,7 @@ const App = () => {
     </div>
     <br />
     <Button buttonType="solid"/>
+    </section>
     </Fragment>
     
   )

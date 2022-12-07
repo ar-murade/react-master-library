@@ -59,8 +59,7 @@
  .collapsewrapper .drawer__trigger:checked
     + .drawer__title
     + .drawer__contentwrapper {
-    max-height: 350px;
-    max-height: 350px;
+    max-height: 1000px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
  }
